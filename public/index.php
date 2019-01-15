@@ -42,6 +42,11 @@ check_libraries($libraries);
     <!-- to change field size change $fieldSize at style.css and "data-fieldsize" attribute of #snake-field at index.php -->
     <div id="snake-field" data-fieldsize="20"></div>
 
+    <div id="snake-settings">
+      <label for="snake-speed">Скорость</label>
+      <input type="number" min=1 max=15 name="snake-speed">
+    </div>
+
     <div id="snake-buttons"></div>
   </main>
 

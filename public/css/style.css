@@ -1,3 +1,17 @@
+/**************************/
+/* Snake field settings
+/*
+/* to change field size change $fieldSize at style.css and data-fieldsize="20" of #snake-field at index.php
+/**************************/
+/**************************/
+/* color settings
+/**************************/
+/**************************/
+/* mixins
+/**************************/
+/**************************/
+/* import styles for blocks
+/**************************/
 .snakeField {
   width: 570px;
   padding: 15px;
@@ -15,6 +29,22 @@
   background: rgba(0, 0, 0, 0.7);
 }
 
+.snakeField__title {
+  text-align: center;
+}
+
+.snakeField__settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 400px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
 .snakeField__cells {
   display: -ms-grid;
   display: grid;
@@ -23,11 +53,81 @@
   -ms-grid-rows: (20px)[20];
       grid-template-rows: repeat(20, 20px);
   width: 400px;
+  border: 1px solid #bb5555;
   margin: 0 auto;
   border-collapse: collapse;
 }
 
 .snakeField__cell {
-  border: 1px dotted #474747;
+  border: 1px dotted #909090;
   background: #93be96;
+}
+
+.snakeField__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 400px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+/**************************/
+/* DOM element classes
+/**************************/
+body {
+  color: #474747;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  font-size: 14pt;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/**************************/
+/* main classes
+/**************************/
+.wrapper {
+  width: 920px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+@media (max-width: 991px) {
+  .wrapper {
+    width: 720px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    width: 100vw;
+    margin: 0;
+  }
+}
+
+.button {
+  color: #f7f7f7;
+  text-transform: uppercase;
+  padding: 7px 15px;
+  border: none;
+  border-radius: 5px;
+  background: #bb5555;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background: #bb7575;
+  -webkit-box-shadow: 0 0 4px 0 #bb474788;
+          box-shadow: 0 0 4px 0 #bb474788;
 }
