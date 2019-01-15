@@ -1,0 +1,33 @@
+.snakeField {
+  width: 570px;
+  padding: 15px;
+  margin: 90px auto;
+  background: #f7f7f7;
+  border-radius: 15px;
+}
+
+.snakeField__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.snakeField__cells {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (20px)[20];
+      grid-template-columns: repeat(20, 20px);
+  -ms-grid-rows: (20px)[20];
+      grid-template-rows: repeat(20, 20px);
+  width: 400px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.snakeField__cell {
+  border: 1px dotted #474747;
+  background: #93be96;
+}
